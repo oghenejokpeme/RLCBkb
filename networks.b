@@ -85,17 +85,17 @@ neg_regulates(A,B):-
 compound_id(Compound):-
     drug(Compound).
 
-has_group_count(Compound, Group, Count):-
-    compound_id(Compound), 
-    has_functional_group(Compound, Group), 
-    findall(Group, comp_func_group(Compound, _, Group, _), Ans),
-    length(Ans, Count).
+#has_group_count(Compound, Group, Count):-
+#    compound_id(Compound), 
+#    has_functional_group(Compound, Group), 
+#    findall(Group, comp_func_group(Compound, _, Group, _), Ans),
+#    length(Ans, Count).
 
-has_ring_count(Compound, Ring, Count):-
-    compound_id(Compound), 
-    has_ring(Compound, Ring), 
-    findall(Ring, comp_ring(Compound, _, _, Ring), Ans),
-    length(Ans, Count).
+#has_ring_count(Compound, Ring, Count):-
+#    compound_id(Compound), 
+#    has_ring(Compound, Ring), 
+#    findall(Ring, comp_ring(Compound, _, _, Ring), Ans),
+#    length(Ans, Count).
 
 drug_drug_(DrugA,DrugB):-
     drug_drug(DrugA,DrugB);
